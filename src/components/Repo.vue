@@ -1,0 +1,37 @@
+<template>
+  <div>
+    <h1>{{repository.name}}</h1>
+    <h2>{{ repository.description }}</h2>
+    <h2>{{ repository.id }}</h2>
+    <h2>{{ repository.stargazers_count }}</h2>
+    <h2>{{ repository.fork }}</h2>
+    <h2>{{ repository.forks_count }}</h2>
+    <h2>{{ repository.language }}</h2>
+    <h2>{{ repository.created_at }}</h2>
+    <h2>{{ repository.size }}</h2>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      repository: {},
+    };
+  },
+  mounted() {
+    this.fetchRepository();
+  },
+  methods: {
+    async fetchRepository() {
+      try {
+        const id = this.$route.params.id;
+        const response = await fetch(`https://api.github.com/repos/diptech-hub/${id}`);
+        this.repository = await response.json();
+      } catch (error) {
+        console.error(error);
+      }
+    },
+  },
+};
+</script>
