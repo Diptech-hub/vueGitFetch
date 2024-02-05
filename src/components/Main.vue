@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1 class="text-3xl font-bold underline p-6">My Github Repositories</h1>
-      <button v-for="repo in repositories" :key="repo.id">
-        <router-link :to="{ name: 'Repo', params: { id: repo.name } }">{{ repo.name }}</router-link>
+    <h1 class="text-4xl font-bold m-8">My Github Repositories</h1>
+      <button v-for="repo in repositories" :key="repo.id" class="m-1 bg-blue-500 hover:bg-blue-900">
+        <router-link :to="{ name: 'Repo', params: { id: repo.name } }" class="text-white hover:text-white">{{ repo.name }}</router-link>
       </button>
   </div>
 </template>

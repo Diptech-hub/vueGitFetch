@@ -1,14 +1,14 @@
 <template>
   <div>
     <h1>{{repository.name}}</h1>
-    <h2>{{ repository.description }}</h2>
-    <h2>{{ repository.id }}</h2>
-    <h2>{{ repository.stargazers_count }}</h2>
-    <h2>{{ repository.fork }}</h2>
-    <h2>{{ repository.forks_count }}</h2>
-    <h2>{{ repository.language }}</h2>
-    <h2>{{ repository.created_at }}</h2>
-    <h2>{{ repository.size }}</h2>
+    <h2>Description: {{ repository.description }}</h2>
+    <h2>ID: {{ repository.id }}</h2>
+    <h2>Stagazers Count: {{ repository.stargazers_count }}</h2>
+    <h2>Fork: {{ repository.fork }}</h2>
+    <h2>Forks Count: {{ repository.forks_count }}</h2>
+    <h2>Language: {{ repository.language }}</h2>
+    <h2>Date Created: {{ repository.created_at }}</h2>
+    <h2>Size :{{ repository.size }}</h2>
   </div>
 </template>
 
